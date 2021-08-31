@@ -1,15 +1,19 @@
 #FUNCOES
-def mostraMensagem(msg, num):
+def mostramensagem(msg, num):
     quantidadeTracos = len(msg+str(num)*2)
     print('-'*quantidadeTracos)
     print(msg, num)
     print('-'*quantidadeTracos)
 
+def tabuada(num):
+    for i in range(1, 11):
+        resultadoTabuada = num * i
+        print(num, 'x', i, '=', resultadoTabuada)
+
 
 #TABUADA
-entradaUsuarioTabuada = int(input('Digite um número para ser calculada a tabuada: '))
-mostraMensagem('Tabuada do', entradaUsuarioTabuada)
+if __name__ == '__main__':
+    entradaUsuarioTabuada = int(input('Digite um número para ser calculada a tabuada: '))
 
-for i in range(1, 11):
-    resultadoTabuada = entradaUsuarioTabuada*i
-    print(entradaUsuarioTabuada, 'x', i, '=', resultadoTabuada)
+    mostramensagem('Tabuada do', entradaUsuarioTabuada)
+    tabuada(entradaUsuarioTabuada)
